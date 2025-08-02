@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Cursor
+Comment=AI-first code editor
+Exec=/path/to/your/Cursor-AppImage.AppImage
+Icon=/usr/share/pixmaps/cursor.png
+Terminal=false
+Categories=Development;IDE;TextEditor;
+Keywords=editor;code;development;IDE;
+StartupWMClass=Cursor 
