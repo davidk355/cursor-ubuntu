@@ -26,7 +26,8 @@ sudo tee /usr/local/bin/cursor-wrapper > /dev/null << EOF
 # Simple wrapper to run Cursor with --no-sandbox to bypass AppArmor
 
 # Always run with --no-sandbox to avoid AppArmor issues
-exec "$CURSOR_APPIMAGE_PATH" --no-sandbox "\$@"
+nohup "$CURSOR_APPIMAGE_PATH" --no-sandbox "\$@" >/dev/null 2>&1 &
+disown
 EOF
 
 sudo chmod +x /usr/local/bin/cursor-wrapper

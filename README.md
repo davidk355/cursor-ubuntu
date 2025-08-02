@@ -17,15 +17,13 @@ This repository contains scripts and files to integrate Cursor into your Ubuntu 
 - `env.example` - Example environment configuration
 - `cursor.desktop` - Desktop entry template
 - `install_cursor_desktop.sh` - Basic installation script (legacy)
-- `setup_cursor_ubuntu.sh` - Comprehensive setup script (legacy)
-- `uninstall_cursor_desktop.sh` - Enhanced uninstallation script
 
 ## Installation
 
 **Before you begin:**
 Download the latest Cursor AppImage from the [official website](https://www.cursor.so/download) and place it in your preferred directory (e.g., `~/Applications/`).
 
-### Option 1: Environment-Based Setup (Recommended)
+### Environment-Based Setup (Recommended)
 
 1. **Set up your environment configuration:**
    ```bash
@@ -40,7 +38,7 @@ Download the latest Cursor AppImage from the [official website](https://www.curs
    ./setup_cursor_env.sh install
    ```
 
-### Option 2: Manual Environment Setup
+### Manual Environment Setup
 
 1. **Copy the example environment file:**
    ```bash
@@ -51,7 +49,6 @@ Download the latest Cursor AppImage from the [official website](https://www.curs
    ```bash
    nano .env
    ```
-   
    Example configuration:
    ```bash
    CURSOR_APPIMAGE_PATH=/home/username/Applications/Cursor-AppImage.AppImage
@@ -65,34 +62,15 @@ Download the latest Cursor AppImage from the [official website](https://www.curs
    ./setup_cursor_env.sh install
    ```
 
-### Option 3: Legacy Installation (Not Recommended)
-
-1. Make sure Cursor AppImage is installed in your Applications directory
-2. Make the setup script executable:
-   ```bash
-   chmod +x setup_cursor_ubuntu.sh
-   ```
-3. Run the comprehensive setup script:
-   ```bash
-   ./setup_cursor_ubuntu.sh
-   ```
-
 ## Uninstallation
 
-### Environment-Based Uninstallation (Recommended)
+### Environment-Based Uninstallation
 
 ```bash
 ./setup_cursor_env.sh uninstall
 ```
 
-### Legacy Uninstallation
-
-```bash
-chmod +x uninstall_cursor_desktop.sh
-./uninstall_cursor_desktop.sh
-```
-
-Both methods will remove:
+This will remove:
 - Desktop entry
 - Icon file
 - Symlink
