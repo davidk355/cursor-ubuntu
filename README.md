@@ -12,11 +12,8 @@ This repository contains scripts and files to integrate Cursor into your Ubuntu 
 
 ## Files
 
-- `setup_cursor_env.sh` - **RECOMMENDED**: Environment-based installation script
-- `setup_env.sh` - Helper script to create `.env` file
-- `env.example` - Example environment configuration
-- `cursor.desktop` - Desktop entry template
-- `install_cursor_desktop.sh` - Basic installation script (legacy)
+- `scripts/` - All setup, install, and helper scripts for Cursor desktop integration
+- `desktop/` - Desktop entry templates, example environment files, and other assets
 
 ## Installation
 
@@ -27,22 +24,22 @@ Download the latest Cursor AppImage from the [official website](https://www.curs
 
 1. **Set up your environment configuration:**
    ```bash
-   chmod +x setup_env.sh
-   ./setup_env.sh
+   chmod +x scripts/setup_env.sh
+   scripts/setup_env.sh
    ```
    This will create a `.env` file with your personal configuration.
 
 2. **Install Cursor desktop integration:**
    ```bash
-   chmod +x setup_cursor_env.sh
-   ./setup_cursor_env.sh install
+   chmod +x scripts/setup_cursor_env.sh
+   scripts/setup_cursor_env.sh install
    ```
 
 ### Manual Environment Setup
 
 1. **Copy the example environment file:**
    ```bash
-   cp env.example .env
+   cp desktop/env.example .env
    ```
 
 2. **Edit the `.env` file with your configuration:**
@@ -58,8 +55,8 @@ Download the latest Cursor AppImage from the [official website](https://www.curs
 
 3. **Install Cursor desktop integration:**
    ```bash
-   chmod +x setup_cursor_env.sh
-   ./setup_cursor_env.sh install
+   chmod +x scripts/setup_cursor_env.sh
+   scripts/setup_cursor_env.sh install
    ```
 
 ## Uninstallation
@@ -67,7 +64,7 @@ Download the latest Cursor AppImage from the [official website](https://www.curs
 ### Environment-Based Uninstallation
 
 ```bash
-./setup_cursor_env.sh uninstall
+scripts/setup_cursor_env.sh uninstall
 ```
 
 This will remove:
